@@ -16,7 +16,7 @@ def load_model():
     return MobileNetV2(weights="imagenet")
 
 # (1) PLEASE load model to model HERE !
-model = joblib.load('model.pkl')
+model = load_model()
 
 # 3. upload file to streamlit
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
